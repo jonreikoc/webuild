@@ -1,0 +1,29 @@
+Redirecting...
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Links Sequentially</title>
+    <script>
+        function openLinksSequentially() {
+            // Open the first link in a new tab
+            var firstTab = window.open('https://shope.ee/2q77n9Lb5n', '_blank');
+
+            // After a delay of 1 second, open the second link
+            setTimeout(function() {
+                firstTab.close(); // Close the first tab (optional)
+                window.open('https://docs.google.com/spreadsheets/d/1nfVzcLJ84HOZeXl4p_8iMyIy7Uau21Jw2Z_T3WJGKjA/edit?usp=sharing', '_blank'); // Open the second link in a new tab
+            }, 2000); // Adjust the delay as needed (in milliseconds)
+        }
+
+        // Call the function when the page loads
+        window.onload = function() {
+            openLinksSequentially();
+        };
+    </script>
+</head>
+<body>
+    <!-- No button or link needed -->
+</body>
+</html>
